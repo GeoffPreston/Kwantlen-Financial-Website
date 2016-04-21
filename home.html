@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Kwantlen Financial</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="kwantlen.css">
+  <script>
+	function showpay() 
+		{
+		if ((document.calc.loan.value == null || document.calc.loan.value.length == 0) || (document.calc.months.value == null || document.calc.months.value.length == 0)
+		|| (document.calc.rate.value == null || document.calc.rate.value.length == 0))
+			{ 
+				document.calc.pay.value = "You have not filled the necessary fields.";
+			}
+		else
+			{
+			var principal = document.calc.loan.value;
+			var term  = document.calc.months.value;
+			var interest   = document.calc.rate.value / 1200;
+			document.calc.pay.value = principal * interest / (1 - (Math.pow(1/(1 + intr), term)));
+			}
+		}
+</script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header roll="banner">
+      <h1>Kwantlen Financial</h1>
+    </header>
+	<nav role="navigation">
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="appointment">Book an Appointment</a></li>
+			<li><a href="http://www.point2homes.com/CA/Real-Estate-Listings/BC/Vancouver.html">Listings</a></li>
+		</ul>
+	</nav>
+	 <aside roll="complementary">
+      <h2>Welcome to Kwantlen Financial Services </h2>
+      <p>akewjfhafgbsfg</p>
+    </aside>
+
+	<main roll="main" id="content">
+		<table>
+			<tr><th>Description</th>
+			<tr><th>Data Entry</th></tr>
+		</table>
+    <footer>
+      <p>Footer text</p>
+    </footer>
+	</main>
+
+  </div>
+</body>
+
+</html>
